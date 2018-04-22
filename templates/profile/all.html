@@ -13,11 +13,13 @@
 {{ range .Profiles }}
 {{ if .NameSet }}
     <p data-address="{{ .Name }} {{ .GetAddressString }}">
-        <a class="btn" href="/profile/{{ .GetAddressString }}">{{ .Name }} ({{ .GetAddressString }})</a>
+        <a class="btn" href="/profile/{{ .GetAddressString }}"><span class="mbri-user"></span>
+ {{ .Name }} ({{ .GetAddressString }})</a>
     </p>
 {{ else }}
     <p data-address="{{ .GetAddressString }}">
-        <a class="btn" href="/profile/{{ .GetAddressString }}">{{ .GetAddressString }}</a>
+        <a class="btn" href="/profile/{{ .GetAddressString }}"><span class="mbri-user"></span>
+ {{ .GetAddressString }}</a>
     </p>
 {{ end }}
 {{ end }}

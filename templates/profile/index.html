@@ -18,11 +18,13 @@
 <ul>
 {{ range .Likes }}
     <li>
-        Liked <a href="post/{{ .GetPostTransactionHashString }}">{{ .Name }}'s post</a>
+        <span class="mbri-star"></span>
+ Liked <a href="post/{{ .GetPostTransactionHashString }}">{{ .Name }}'s post</a>
         - {{ formatBigInt .Amount }} satoshis
         ({{ .GetTimeString }})
         <a target="_blank"
-           href="https://explorer.bitcoin.com/bch/tx/{{ .GetTransactionHashString }}">View on Block Explorer</a>
+           href="https://explorer.bitcoin.com/bch/tx/{{ .GetTransactionHashString }}"><span class="mbri-extension"></span>
+ View on Block Explorer</a>
     </li>
 {{ end }}
 </ul>

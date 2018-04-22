@@ -3,9 +3,9 @@
 {{ else }}
 <h3>Followers</h3>
 {{ end }}
-
+<ul class="followers">
 {{ range . }}
-<p>
-    <a class="btn" href="/profile/{{ .GetAddressString }}">{{ .Name }} ({{ .GetAddressString }})</a>
-</p>
+    <li href="/profile/{{ .GetAddressString }}"><span class="mbri-user"></span>
+ {{ .Name }} ({{ .GetAddressString }})</li>
 {{ end }}
+</ul>

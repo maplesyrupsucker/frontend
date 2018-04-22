@@ -1,9 +1,9 @@
 <p>
 {{ if not (eq .Offset 0) }}
-    <a class="btn" href="feed?offset={{ .PrevOffset }}">Prev</a>
+    <a class="btn prev-button" href="feed?offset={{ .PrevOffset }}">Prev</a>
 {{ end }}
 {{ if eq .PostCount 25 }}
-    <a class="btn" href="feed?offset={{ .NextOffset }}">Next</a>
+    <a class="btn next-button" href="feed?offset={{ .NextOffset }}">Next</a>
 {{ end }}
 </p>
 
@@ -11,10 +11,10 @@
 
 <p>
 {{ if not (eq .Offset 0) }}
-    <a class="btn" href="feed?offset={{ .PrevOffset }}">Prev</a>
+    <a class="btn prev-button" href="feed?offset={{ .PrevOffset }}">Prev</a>
 {{ end }}
 {{ if eq .PostCount 25 }}
-    <a class="btn" href="feed?offset={{ .NextOffset }}">Next</a>
+    <a class="btn next-button" href="feed?offset={{ .NextOffset }}">Next</a>
 {{ end }}
 </p>
 
